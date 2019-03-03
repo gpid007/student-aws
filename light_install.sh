@@ -6,7 +6,7 @@ VIM=~/vim
 VDOT=~/.vim
 GIT_BASH=~/.bash-git-prompt
 DIR_ARR=($VIM $VDOT $GIT_BASH)
-PWD=$(dirname $0)
+PWD=$(dirname "$0")
 # OWN_PATH=$(dirname "$relpath $0")
 
 echo "# ========== OS-RELEASE INSTALL ========== #"
