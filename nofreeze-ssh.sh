@@ -14,17 +14,17 @@ Enter integer to set AliveInterval for
 read CHOICE
 
 case $CHOICE in
-    1|[Cc]lient)  echo Client
+    1|[Cc]lient)  echo -e "Client\n"
         if ! grep -Plz $CLIENT $SSH_CONFIG; then
             echo -e $CLIENT | sudo sh -c "cat >> $SSH_CONFIG"
         fi
     ;;
-    2|[Ss]erver)  echo Server    
+    2|[Ss]erver)  echo -e "Server\n"
         if ! grep -Plz $SERVER $SSH_CONFIG; then
             echo -e $SERVER | sudo sh -c "cat >> $SSH_CONFIG"
         fi
     ;;
-    3|[Ee]xit)  echo Abort.
+    3|[Ee]xit)  echo -e "Abort.\n"
         exit
     ;;
 esac
