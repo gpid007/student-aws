@@ -6,8 +6,8 @@ VIM=~/vim
 VDOT=~/.vim
 GIT_BASH=~/.bash-git-prompt
 DIR_ARR=($VIM $VDOT $GIT_BASH)
-PWD=$(dirname $0)
-OWN_PATH=$(dirname "$relpath $0")
+# PWD=$(dirname $0)
+# OWN_PATH=$(dirname "$relpath $0")
 
 echo "# ========== OS-RELEASE INSTALL ========== #"
 if [ $(which yum) ]; then
@@ -54,7 +54,7 @@ echo "# ========== VIM ========== #"
 # sudo pip3 install yapf pycodestyle
  
 # ---------- VIMRC ---------- #
-cp $OWN_PATH/vimrc ~/.vimrc
+cp vimrc ~/.vimrc
  
 # # ---------- BUNDLE ---------- #
 # vim -c 'BundleInstall!' -c 'qa!'
@@ -84,7 +84,7 @@ bind M set -g mode-mouse off \; set -g mouse-resize-pane off \; set -g mouse-sel
 EOF
 fi
 # ---------- .TMUX.CONF COPY  ----------
-cat $OWN_PATH/tmux.conf >> ~/.tmux.conf
+cat tmux.conf >> ~/.tmux.conf
 
 
 echo "# ========== GIT BASH ========= #"
